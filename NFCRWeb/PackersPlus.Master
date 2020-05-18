@@ -1,0 +1,157 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PackersPlus.master.cs" Inherits="NCRFTRWeb.PackersPlus" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>NCR / FTR Processes</title>
+    <style type="text/css">
+.clsMenu
+{
+    display: block;
+    background-color: #5D7B9D;
+}
+.clsMenuItem
+{
+    width: 180px;
+    height: 35px;
+    display: block;
+    color: #5D7B9D;
+    line-height: 30px;
+}
+.clsMenuItem a:hover
+{
+    width: 180px;
+    height: 35px;
+    display: block;
+    background: url('images/navButton.png') repeat-x;
+    color:#5D7B9D;
+    Font-Size:0.8em; 
+}
+.clsMenu table
+{
+    background-color: Transparent;
+}
+.clsDynamicMenuItem
+{
+    background-color: #F7F6F3;
+    color: #ffffff;
+    width: 180px;
+    height: 27px;
+    display: block;
+    Font-Size:0.8em; 
+}
+.clsDynamicMenuItem a:hover
+{
+    background: url('images/navButtonDynamic.png') repeat-x;
+    color:#5D7B9D;
+    width: 180px;
+    height: 27px;
+    display: block;
+    Font-Size:0.75em; 
+}
+.clsModify
+{
+      Font-Size:0.8em;     
+}
+.style1
+        {
+            width: 60px;
+        }
+.ContextMenuPanel 
+{
+	border: 1px solid #868686;
+	z-index: 1000;
+	background: url(images/menu-bg.gif) repeat-y 0 0 #FAFAFA;
+	cursor: default;
+	padding: 1px 1px 0px 1px;
+	font-size: 11px;
+}
+
+.ContextMenuBreak
+{
+	margin:1px 1px 1px 32px;
+	padding:0;
+	height:1px;
+	overflow:hidden;
+	display:block;
+	border-top: 1px solid #C5C5C5;	
+}
+
+a.ContextMenuItem
+{
+	margin: 1px 0 1px 0;
+	display: block;
+	color: #003399;
+	text-decoration: none;
+	cursor: pointer;	
+	padding: 4px 19px 4px 33px;
+	white-space: nowrap;
+}
+
+a.ContextMenuItem-Selected
+{
+	font-weight: bold;
+}
+
+a.ContextMenuItem:hover
+{
+	background-color: #FFE6A0;
+	color: #003399;
+	border: 1px solid #D2B47A;
+	padding: 3px 18px 3px 32px;
+}
+ </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+     <link href="global.css" rel="stylesheet" type="text/css" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" enctype="multipart/form-data">
+    <div>
+        <asp:Panel ID="MasterPanel" runat="server">
+        
+    <div style="background-color:Menu; text-align:center">
+    <table>
+        <tr style="background-color:Menu; text-align:center">
+        <td style="background-color:#F7F6F3;">
+          <asp:Menu ID="Menu1" runat="server"  BackColor="#F7F6F3" orientation="Horizontal"
+                        DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" 
+                        ForeColor="#7C6F57" ItemWrap="True" StaticSubMenuIndent="10px" 
+                Height="39px" onmenuitemclick="Menu1_MenuItemClick">
+                        <StaticMenuStyle CssClass="clsMenu" />
+                        <StaticMenuItemStyle CssClass="clsMenuItem" />
+                        <StaticSelectedStyle CssClass="clsMenuItem" Font-Underline="True" />
+                        <DynamicMenuStyle  />
+                        <DynamicMenuItemStyle CssClass="clsDynamicMenuItem"  />
+                        <DynamicSelectedStyle CssClass="clsDynamicMenuItem" ForeColor="#ffffff" Font-Underline="True" />
+                                  <Items>
+                            <asp:MenuItem NavigateUrl="~/DetailRecords.aspx" Text="Detail Records" Value="Detail Records"></asp:MenuItem>
+                            <asp:MenuItem Text="Support Tables" Value="Support Tables">
+                                <asp:MenuItem NavigateUrl="~/Customers.aspx" Text="Customers" Value="Customers"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Engineer.aspx" Text="Engineers" Value="Engineers"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Operators.aspx" Text="Operators" Value="Operators"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Locations.aspx" Text="Locations" Value="Locations"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Problems.aspx" Text="Problem Occurance" Value="Problem Occurance"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Misc.aspx" Text="Miscellaneous" Value="Miscellaneous"></asp:MenuItem>
+
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Search.aspx" Text="Search" Value="Search"></asp:MenuItem>
+                            <asp:MenuItem Text="Print" Value="Print" Target="onClick" ToolTip="Prints entire screen"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Help.aspx" Text="Help" Value="Help"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                    </td>
+       </tr>
+       </table>
+       </div>
+       <br />
+
+        <asp:ContentPlaceHolder ID="ContentMain" runat="server">
+
+        </asp:ContentPlaceHolder>
+        </asp:Panel>
+    </div>
+    </form>
+</body>
+</html>
