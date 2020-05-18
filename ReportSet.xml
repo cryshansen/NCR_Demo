@@ -1,0 +1,18 @@
+<NewDataSet>
+  <Result>
+    <ReportId>1</ReportId>
+    <ReportNumber>000000001</ReportNumber>
+    <Title>Test Report Insert</Title>
+    <CompanyName>Some Company</CompanyName>
+    <Customer>Some Guy</Customer>
+    <ReportDate>04/14/2010</ReportDate>
+  </Result>
+  <Result>
+    <ReportId>2</ReportId>
+    <ReportNumber>000000002</ReportNumber>
+    <Title>Testing Add2Update</Title>
+    <CompanyName>TestErrorOnDetail</CompanyName>
+    <Customer>Tester Erros</Customer>
+    <ReportDate>04/21/2010</ReportDate>
+  </Result>
+</NewDataSet>

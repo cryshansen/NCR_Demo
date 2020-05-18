@@ -1,0 +1,54 @@
+﻿body
+{
+	color: black;
+	background-color: white;
+	margin: 0 auto;
+	padding: 0;
+	font-family: "Lucida Grande" , verdana, arial;
+}
+
+a
+{
+	color: Blue;
+}
+
+img
+{
+	border: 0px;
+}
+.navigation
+{
+	width: 600px;
+	margin-top: 30px;
+}
+
+#leftnav
+{
+	float: left;
+	width: 180px;
+	text-align: center;
+	font-size: .75em;
+}
+#FirstPageNav
+{
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	color: #996633;
+}
+#FirstPageNav a
+{
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	color: #996633;
+}
+
+#rightnav
+{
+	float: right;
+	width: 180px;
+	margin-right: 20px;
+	text-align: center;
+	font-size: .75em;
+}
